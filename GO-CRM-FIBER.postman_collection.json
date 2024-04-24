@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "9f6f059b-0170-48b0-9c61-567375e0cab0",
+		"name": "GO-CRM-FIBER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9497266",
+		"_collection_link": "https://www.postman.com/cloudy-flare-8233/workspace/go/collection/9497266-9f6f059b-0170-48b0-9c61-567375e0cab0?action=share&source=collection_link&creator=9497266"
+	},
+	"item": [
+		{
+			"name": "ADD LEAD",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ID\": 1,\r\n    \"name\": \"Ramsey Peters\",\r\n    \"company\": \"Amazon\",\r\n    \"email\": \"alex@amazon.com\",\r\n    \"phone\": 82992389423\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/lead",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"lead"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL LEADS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/lead",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"lead"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET A PARTICULAR LEAD",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/lead/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"lead",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE A PARTICULAR LEAD",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/lead/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"lead",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
